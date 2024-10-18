@@ -123,7 +123,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Vitor S. Almeida
+          Vitor
         </a>
       </p>
     </div>

@@ -31,6 +31,8 @@ export default function Home() {
       setIsLoading(true);
       setError("");
 
+      new URL(url);
+
       const response = await fetch("https://short-spot.fly.dev/short-url/", {
         method: "POST",
         headers: {
@@ -48,7 +50,7 @@ export default function Home() {
       const data = await response.json();
       setShortenedUrl(data.shortenedUrl);
     } catch (err) {
-      setError("Failed to shorten URL. Please try again.");
+      setError("Failed to shorten URL. Check the URL and try again.");
       console.error(err);
     } finally {
       setIsLoading(false);
